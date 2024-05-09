@@ -32,10 +32,15 @@ function App() {
     );
   }
 
-  function Clouds() {
+  function Cloud(props: any) {
+    const cloudStyle = `
+      bottom: ${props.cloudPosition.cloudBottom}px;
+      ${props.cloudPosition.cloudSide}: ${props.cloudPosition.cloudSideAmount}px;
+      z-index: ${props.cloudPosition.cloudZIndex}
+    `;
     return (
       <>
-        <div className="cloud-container">
+        <div style={{ cssText: cloudStyle }} className="cloud-container">
           <div className="cloud-part-1"></div>
           <div className="cloud-part-2"></div>
           <div className="cloud-part-3"></div>
@@ -45,11 +50,66 @@ function App() {
     );
   }
 
+  function Bird(props: any) {
+    const birdStyle = `
+    bottom: ${props.birdPosition.birdBottom}px;
+    ${props.birdPosition.birdSide}: ${props.birdPosition.birdSideAmount}px;
+    z-index: ${props.birdPosition.birdZIndex}
+  `;
+
+    return (
+      <>
+        <div style={{ cssText: birdStyle }} className="bird-container">
+          <img src="src/assets/bird.svg" alt="bird" />
+        </div>
+      </>
+    );
+  }
+
   return (
     <>
       <div className="top-container">
         <div className="sun"></div>
-        <Clouds />
+        <Bird
+          birdPosition={{
+            birdBottom: 400,
+            birdSide: "left",
+            birdSideAmount: 100,
+            birdZIndex: 200,
+          }}
+        />
+        <Cloud
+          cloudPosition={{
+            cloudBottom: 710,
+            cloudSide: "left",
+            cloudSideAmount: -20,
+            cloudZIndex: 6,
+          }}
+        />
+        <Cloud
+          cloudPosition={{
+            cloudBottom: 500,
+            cloudSide: "left",
+            cloudSideAmount: -60,
+            cloudZIndex: 6,
+          }}
+        />
+        <Cloud
+          cloudPosition={{
+            cloudBottom: 540,
+            cloudSide: "right",
+            cloudSideAmount: 120,
+            cloudZIndex: 4,
+          }}
+        />
+        <Cloud
+          cloudPosition={{
+            cloudBottom: 480,
+            cloudSide: "right",
+            cloudSideAmount: 365,
+            cloudZIndex: 6,
+          }}
+        />
         <Mountains />
       </div>
       <div className="next-container"></div>

@@ -33,8 +33,9 @@ body {
 
 .cloud-container {
   position: absolute;
-  bottom: 580px;
-  left: 200px;
+  // bottom: 580px;
+  // left: 200px;
+  // z-index: 6;
 }
 .cloud-part-1 {
   position: absolute;
@@ -74,6 +75,20 @@ body {
   border-radius: 50%;
   top: 40px;
   left: 106px;
+}
+
+// The Birds
+.bird-container {
+  position: absolute;
+  // top: 0;
+  // left: 600px;
+  // z-index: 200;
+  // background-color: red;
+  // width: 100px;
+  // height: 100px;
+  img {
+    width: 10px;
+  }
 }
 
 // -------------------------
