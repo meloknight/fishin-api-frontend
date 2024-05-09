@@ -1,0 +1,244 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c5f4ff;
+  overflow-x: hidden;
+}
+
+.top-container {
+  position: relative;
+  height: 80vh;
+  //   border: 2px solid black;
+}
+
+// -------------------------
+// THE SKY!!
+// -------------------------
+.sun {
+  position: absolute;
+  content: "";
+  background-color: #feffcd;
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  bottom: 490px;
+  right: 110px;
+}
+
+.cloud-container {
+  position: absolute;
+  bottom: 580px;
+  left: 200px;
+}
+.cloud-part-1 {
+  position: absolute;
+  //   border: 2px solid black;
+  background-color: white;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  top: 30px;
+}
+.cloud-part-2 {
+  position: absolute;
+  //   border: 2px solid black;
+  background-color: white;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  top: 0;
+  left: 50px;
+}
+.cloud-part-3 {
+  position: absolute;
+  //   border: 2px solid black;
+  background-color: white;
+  height: 55px;
+  width: 130px;
+  border-radius: 0 20px 20px 0px;
+  top: 65px;
+  left: 50px;
+}
+.cloud-part-4 {
+  position: absolute;
+  //   border: 2px solid black;
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  top: 40px;
+  left: 106px;
+}
+
+// -------------------------
+// THE MOUNTAINS!!
+// -------------------------
+.mountain {
+  position: absolute;
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+}
+
+// DISTANT MOUNTAINS
+.distant-mountain {
+  background-color: #a1bba3;
+  z-index: 5;
+}
+
+// @mixin mountain-params($width, $height) {
+//   width: $width;
+//   height: $height;
+// }
+
+.md1 {
+  bottom: 270px;
+  right: -120px;
+  width: 520px;
+  height: 300px;
+}
+.md2 {
+  bottom: 270px;
+  right: -60px;
+  width: 530px;
+  height: 250px;
+}
+.md3 {
+  bottom: 270px;
+  right: 140px;
+  width: 530px;
+  height: 150px;
+}
+.md4 {
+  bottom: 270px;
+  right: 500px;
+  width: 330px;
+  height: 100px;
+}
+.md5 {
+  bottom: 270px;
+  left: 340px;
+  width: 700px;
+  height: 150px;
+}
+.md6 {
+  //   background-color: red;
+  bottom: 270px;
+  left: -20px;
+  width: 420px;
+  height: 200px;
+}
+.md7 {
+  bottom: 270px;
+  left: -170px;
+  width: 500px;
+  height: 250px;
+}
+
+// middle mountains
+.middle-mountain {
+  background-color: #82ba86;
+  z-index: 10;
+}
+.mm1 {
+  bottom: 260px;
+  right: -100px;
+  width: 400px;
+  height: 200px;
+}
+.mm2 {
+  bottom: 240px;
+  right: 120px;
+  width: 400px;
+  height: 200px;
+}
+.mm3 {
+  bottom: 240px;
+  right: 360px;
+  width: 400px;
+  height: 110px;
+}
+.mm4 {
+  bottom: 260px;
+  left: 380px;
+  width: 400px;
+  height: 100px;
+}
+.mm5 {
+  bottom: 260px;
+  left: 140px;
+  width: 400px;
+  height: 120px;
+}
+.mm6 {
+  bottom: 260px;
+  left: -190px;
+  width: 500px;
+  height: 180px;
+}
+
+// close mountains
+.close-mountain {
+  background-color: #56a65e;
+  z-index: 15;
+}
+.mc0 {
+  bottom: 190px;
+  right: -220px;
+  width: 400px;
+  height: 200px;
+}
+.mc1 {
+  bottom: 190px;
+  right: -220px;
+  width: 400px;
+  height: 200px;
+}
+.mc2 {
+  bottom: 220px;
+  right: 0px;
+  width: 520px;
+  height: 120px;
+}
+.mc3 {
+  //   background-color: red;
+  bottom: 240px;
+  right: 520px;
+  width: 280px;
+  height: 70px;
+}
+.mc4 {
+  bottom: 240px;
+  right: 620px;
+  width: 620px;
+  height: 120px;
+}
+.mc5 {
+  bottom: 190px;
+  left: -160px;
+  width: 320px;
+  height: 120px;
+}
+.mc6 {
+  bottom: 210px;
+  left: -130px;
+  width: 320px;
+  height: 120px;
+}
+.mc7 {
+  bottom: 250px;
+  left: 50px;
+  width: 220px;
+  height: 60px;
+}
+
+// FOREGROUND - Grass and bushes
+.next-container {
+  background-color: #25b133;
+  height: 1000px;
+  width: 100vw;
+}
