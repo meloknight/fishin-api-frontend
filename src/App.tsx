@@ -3,7 +3,7 @@ import "./app.scss";
 import Birds from "./components/Birds";
 import Clouds from "./components/Clouds";
 import Mountains from "./components/Mountains";
-import Bush from "./components/Bush";
+import Bushes from "./components/Bushes";
 
 function App() {
   return (
@@ -13,16 +13,7 @@ function App() {
         <Birds />
         <Clouds />
         <Mountains />
-        <Bush
-          bushPosition={{
-            bushBottom: -80,
-            bushSide: "left",
-            bushSideAmount: -90,
-            bushZIndex: 1000,
-            bushWidth: 300,
-            bushHeight: 150,
-          }}
-        />
+        <Bushes />
       </div>
       <div className="next-container"></div>
     </>
