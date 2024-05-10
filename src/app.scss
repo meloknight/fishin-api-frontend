@@ -13,7 +13,20 @@ body {
 
 .top-container {
   position: relative;
-  height: 80vh;
+  height: 95vh;
+  max-height: 750px;
+}
+
+.title {
+  padding: 10px;
+  margin: 10px;
+  // color: #56a65e;
+  color: black;
+  // background: #feffcd5d;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 // -------------------------
@@ -93,7 +106,7 @@ body {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(50px);
+    transform: translateX(40px);
   }
   100% {
     transform: translateX(0);
@@ -102,7 +115,7 @@ body {
 
 .bird-container {
   position: absolute;
-  animation: bird-drift 30s ease-in-out infinite;
+  animation: bird-drift 45s ease-in-out infinite;
   img {
     width: 7px;
   }
@@ -114,6 +127,8 @@ body {
 .mountain {
   position: absolute;
   clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  --baseline-background-height: 270px;
+  --baseline-background-height-vh: 40vh;
 }
 
 // DISTANT MOUNTAINS
@@ -128,44 +143,66 @@ body {
 // }
 
 .md1 {
-  bottom: 270px;
+  // bottom: 270px;
+  bottom: min(
+    var(--baseline-background-height),
+    var(--baseline-background-height-vh)
+  );
   right: -120px;
   width: 520px;
   height: 300px;
+  // height: min(300px, 50vh);
 }
 .md2 {
-  bottom: 270px;
+  bottom: min(
+    var(--baseline-background-height),
+    var(--baseline-background-height-vh)
+  );
   right: -60px;
   width: 530px;
   height: 250px;
 }
 .md3 {
-  bottom: 270px;
+  bottom: min(
+    var(--baseline-background-height),
+    var(--baseline-background-height-vh)
+  );
   right: 140px;
   width: 530px;
   height: 150px;
 }
 .md4 {
-  bottom: 270px;
+  bottom: min(
+    var(--baseline-background-height),
+    var(--baseline-background-height-vh)
+  );
   right: 500px;
   width: 330px;
   height: 100px;
 }
 .md5 {
-  bottom: 270px;
+  bottom: min(
+    var(--baseline-background-height),
+    var(--baseline-background-height-vh)
+  );
   left: 340px;
   width: 700px;
   height: 150px;
 }
 .md6 {
-  //   background-color: red;
-  bottom: 270px;
+  bottom: min(
+    var(--baseline-background-height),
+    var(--baseline-background-height-vh)
+  );
   left: -20px;
   width: 420px;
   height: 200px;
 }
 .md7 {
-  bottom: 270px;
+  bottom: min(
+    var(--baseline-background-height),
+    var(--baseline-background-height-vh)
+  );
   left: -170px;
   width: 500px;
   height: 250px;
@@ -177,37 +214,55 @@ body {
   z-index: 10;
 }
 .mm1 {
-  bottom: 260px;
+  bottom: min(
+    var(--baseline-background-height) - 10px,
+    var(--baseline-background-height-vh) - 10px
+  );
   right: -100px;
   width: 400px;
   height: 200px;
 }
 .mm2 {
-  bottom: 240px;
+  bottom: min(
+    var(--baseline-background-height) - 30px,
+    var(--baseline-background-height-vh) - 30px
+  );
   right: 120px;
   width: 400px;
   height: 200px;
 }
 .mm3 {
-  bottom: 240px;
+  bottom: min(
+    var(--baseline-background-height) - 30px,
+    var(--baseline-background-height-vh) - 30px
+  );
   right: 360px;
   width: 400px;
   height: 110px;
 }
 .mm4 {
-  bottom: 260px;
+  bottom: min(
+    var(--baseline-background-height) - 10px,
+    var(--baseline-background-height-vh) - 10px
+  );
   left: 380px;
   width: 400px;
   height: 100px;
 }
 .mm5 {
-  bottom: 260px;
+  bottom: min(
+    var(--baseline-background-height) - 10px,
+    var(--baseline-background-height-vh) - 10px
+  );
   left: 140px;
   width: 400px;
   height: 120px;
 }
 .mm6 {
-  bottom: 260px;
+  bottom: min(
+    var(--baseline-background-height) - 10px,
+    var(--baseline-background-height-vh) - 10px
+  );
   left: -190px;
   width: 500px;
   height: 180px;
@@ -219,50 +274,74 @@ body {
   z-index: 15;
 }
 .mc0 {
-  bottom: 190px;
+  bottom: min(
+    var(--baseline-background-height) - 80px,
+    var(--baseline-background-height-vh) - 80px
+  );
   right: -220px;
   width: 400px;
   height: 200px;
 }
 .mc1 {
-  bottom: 190px;
+  bottom: min(
+    var(--baseline-background-height) - 80px,
+    var(--baseline-background-height-vh) - 80px
+  );
   right: -220px;
   width: 400px;
   height: 200px;
 }
 .mc2 {
-  bottom: 220px;
+  bottom: min(
+    var(--baseline-background-height) - 50px,
+    var(--baseline-background-height-vh) - 50px
+  );
   right: 0px;
   width: 520px;
   height: 120px;
 }
 .mc3 {
   //   background-color: red;
-  bottom: 240px;
+  bottom: min(
+    var(--baseline-background-height) - 30px,
+    var(--baseline-background-height-vh) - 30px
+  );
   right: 520px;
   width: 280px;
   height: 70px;
 }
 .mc4 {
-  bottom: 240px;
+  bottom: min(
+    var(--baseline-background-height) - 30px,
+    var(--baseline-background-height-vh) - 30px
+  );
   right: 620px;
   width: 620px;
   height: 120px;
 }
 .mc5 {
-  bottom: 190px;
+  bottom: min(
+    var(--baseline-background-height) - 80px,
+    var(--baseline-background-height-vh) - 80px
+  );
   left: -160px;
   width: 320px;
   height: 120px;
 }
 .mc6 {
-  bottom: 210px;
+  bottom: min(
+    var(--baseline-background-height) - 60px,
+    var(--baseline-background-height-vh) - 60px
+  );
   left: -130px;
   width: 320px;
   height: 120px;
 }
 .mc7 {
-  bottom: 250px;
+  bottom: min(
+    var(--baseline-background-height) - 20px,
+    var(--baseline-background-height-vh) - 20px
+  );
   left: 50px;
   width: 220px;
   height: 60px;
@@ -285,7 +364,7 @@ body {
   background: linear-gradient(
     180deg,
     rgba(37, 177, 51, 1) 0%,
-    rgba(37, 177, 51, 1) 9%,
+    rgba(37, 177, 51, 1) 7%,
     rgba(197, 244, 255, 1) 100%
   );
   padding-top: 210px;
