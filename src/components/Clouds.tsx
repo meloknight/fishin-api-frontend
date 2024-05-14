@@ -5,7 +5,8 @@ export default function Clouds() {
     <>
       <Cloud
         cloudPosition={{
-          cloudBottom: 710,
+          // cloudBottom: 710,
+          cloudBottom: 85,
           cloudSide: "left",
           cloudSideAmount: -20,
           cloudZIndex: 6,
@@ -13,7 +14,8 @@ export default function Clouds() {
       />
       <Cloud
         cloudPosition={{
-          cloudBottom: 500,
+          // cloudBottom: 500,
+          cloudBottom: 55,
           cloudSide: "left",
           cloudSideAmount: -60,
           cloudZIndex: 6,
@@ -21,7 +23,8 @@ export default function Clouds() {
       />
       <Cloud
         cloudPosition={{
-          cloudBottom: 540,
+          // cloudBottom: 540,
+          cloudBottom: 59,
           cloudSide: "right",
           cloudSideAmount: 120,
           cloudZIndex: 4,
@@ -29,7 +32,7 @@ export default function Clouds() {
       />
       <Cloud
         cloudPosition={{
-          cloudBottom: 400,
+          cloudBottom: 40,
           cloudSide: "right",
           cloudSideAmount: 450,
           cloudZIndex: 11,

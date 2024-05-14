@@ -175,9 +175,16 @@ button {
   height: 140px;
   width: 140px;
   border-radius: 50%;
-  bottom: 490px;
+  // bottom: 490px;
+  bottom: calc(60vh + 50px);
   right: 110px;
 }
+
+// @media (height < 650px) {
+//   .sun {
+//     bottom: 65vh;
+//   }
+// }
 
 @keyframes cloud-drift {
   0% {
