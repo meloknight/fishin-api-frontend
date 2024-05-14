@@ -18,6 +18,50 @@ function App() {
     fish_weight_kgs: 0,
   });
 
+  function FishInfoCard() {
+    return (
+      <section
+        className={`fish-info-card ${
+          fishCardDown ? "fish-info-card-away" : "fish-info-card-animation"
+        }`}
+      >
+        {/* <section className="fish-info-card fish-info-card-away"> */}
+        <h4 className="nice-catch">Nice Catch!</h4>
+        <button
+          onClick={() => setFishCardDown(true)}
+          className="info-card-close-button"
+        >
+          X
+        </button>
+        <div className="info-card-section">
+          <GiFishingHook className="fishing-icon" />
+          <h1 className="info-card-fish-name">{goFishinCardInfo.fish_name}</h1>
+          <GiCirclingFish className="fishing-icon" />
+        </div>
+        <div className="info-card-divider-line"></div>
+        <div className="info-card-section">
+          <p>Weight:</p>
+          <p>{goFishinCardInfo.fish_weight_kgs} kg</p>
+        </div>
+        <div className="info-card-divider-line"></div>
+        <div className="info-card-section">
+          <p>Length:</p>
+          <p>{goFishinCardInfo.fish_length_cms} cm</p>
+        </div>
+        <div className="info-card-divider-line"></div>
+        <div className="info-card-section">
+          <p>Location:</p>
+          <p>Southern Termina Swamps</p>
+        </div>
+        <div className="info-card-divider-line"></div>
+        <div className="info-card-section">
+          <p>Origin:</p>
+          <p>Legend of Zelda: Majora's Mask</p>
+        </div>
+      </section>
+    );
+  }
+
   async function getGoFishin() {
     try {
       const response = await fetch(
@@ -50,47 +94,7 @@ function App() {
         <Clouds />
         <Mountains />
         <Bushes />
-        <section
-          className={`fish-info-card ${
-            fishCardDown ? "fish-info-card-away" : "fish-info-card-animation"
-          }`}
-        >
-          {/* <section className="fish-info-card fish-info-card-away"> */}
-          <h4 className="nice-catch">Nice Catch!</h4>
-          <button
-            onClick={() => setFishCardDown(true)}
-            className="info-card-close-button"
-          >
-            X
-          </button>
-          <div className="info-card-section">
-            <GiFishingHook className="fishing-icon" />
-            <h1 className="info-card-fish-name">
-              {goFishinCardInfo.fish_name}
-            </h1>
-            <GiCirclingFish className="fishing-icon" />
-          </div>
-          <div className="info-card-divider-line"></div>
-          <div className="info-card-section">
-            <p>Weight:</p>
-            <p>{goFishinCardInfo.fish_weight_kgs} kg</p>
-          </div>
-          <div className="info-card-divider-line"></div>
-          <div className="info-card-section">
-            <p>Length:</p>
-            <p>{goFishinCardInfo.fish_length_cms} cm</p>
-          </div>
-          <div className="info-card-divider-line"></div>
-          <div className="info-card-section">
-            <p>Location:</p>
-            <p>Southern Termina Swamps</p>
-          </div>
-          <div className="info-card-divider-line"></div>
-          <div className="info-card-section">
-            <p>Origin:</p>
-            <p>Legend of Zelda: Majora's Mask</p>
-          </div>
-        </section>
+        <FishInfoCard />
         <button onClick={() => getGoFishin()} className="go-fishin-button">
           Go Fishin!
         </button>
