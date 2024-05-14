@@ -100,7 +100,7 @@ export default function Bushes() {
           bushBottom: -20,
           bushSide: "right",
           bushSideAmount: 340,
-          bushZIndex: 30,
+          bushZIndex: 20,
           bushWidth: 60,
           bushHeight: 60,
         }}
@@ -110,7 +110,7 @@ export default function Bushes() {
           bushBottom: -35,
           bushSide: "right",
           bushSideAmount: 370,
-          bushZIndex: 30,
+          bushZIndex: 20,
           bushWidth: 60,
           bushHeight: 60,
         }}
@@ -120,7 +120,7 @@ export default function Bushes() {
           bushBottom: -48,
           bushSide: "right",
           bushSideAmount: 440,
-          bushZIndex: 30,
+          bushZIndex: 20,
           bushWidth: 60,
           bushHeight: 60,
         }}
@@ -130,7 +130,7 @@ export default function Bushes() {
           bushBottom: 70,
           bushSide: "right",
           bushSideAmount: -80,
-          bushZIndex: 30,
+          bushZIndex: 20,
           bushWidth: 180,
           bushHeight: 80,
         }}
@@ -140,7 +140,7 @@ export default function Bushes() {
           bushBottom: -70,
           bushSide: "right",
           bushSideAmount: 470,
-          bushZIndex: 30,
+          bushZIndex: 20,
           bushWidth: 260,
           bushHeight: 100,
         }}
@@ -150,7 +150,7 @@ export default function Bushes() {
           bushBottom: -70,
           bushSide: "right",
           bushSideAmount: 470,
-          bushZIndex: 30,
+          bushZIndex: 20,
           bushWidth: 260,
           bushHeight: 100,
         }}

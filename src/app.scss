@@ -6,9 +6,30 @@
   padding: 0;
 }
 
+:root {
+  --main-font: "Poetsen One";
+  --yellow: #feffcd;
+  --clouds: white;
+  --distant-mountains: #a1bba3;
+  --middle-mountains: #82ba86;
+  --close-mountains: #56a65e;
+  --bushes: #25b133;
+  --title: #25b133;
+  --dark-text: #046900;
+  --sky: #c5f4ff;
+}
+
 body {
-  background-color: #c5f4ff;
+  font-family: var(--main-font), sans-serif;
+  background-color: var(--sky);
   overflow-x: hidden;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+button {
+  font-family: var(--main-font), sans-serif;
+  letter-spacing: 1px;
 }
 
 .top-container {
@@ -18,15 +39,130 @@ body {
 }
 
 .title {
-  padding: 10px;
+  letter-spacing: 1.5px;
+  padding: 20px 45px;
   margin: 10px;
-  // color: #56a65e;
-  color: black;
-  // background: #feffcd5d;
-  z-index: 100;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--title);
+  z-index: 23;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.go-fishin-button {
+  position: absolute;
+  font-size: 2rem;
+  color: var(--bushes);
+  bottom: 0;
+  right: 50px;
+  z-index: 30;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: var(--yellow);
+  border: 2px solid var(--bushes);
+}
+.go-fishin-button:hover {
+  color: var(--yellow);
+  background-color: var(--bushes);
+  border: 2px solid var(--yellow);
+}
+
+.fish-info-card {
+  padding: 40px 20px;
+  padding-bottom: 110px;
+  width: 320px;
+  background-color: var(--yellow);
+  color: var(--bushes);
+  position: absolute;
+  bottom: -590px;
+  left: 50px;
+  left: 5vw;
+  z-index: 25;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid var(--bushes);
+  transition: all 0.4s ease;
+  .nice-catch {
+    position: absolute;
+    top: -3px;
+    left: 7px;
+    font-weight: 100;
+  }
+  .info-card-close-button {
+    position: absolute;
+    color: var(--bushes);
+    top: 4px;
+    right: 9px;
+    font-size: 1.2rem;
+    border: none;
+    background: none;
+  }
+  .info-card-close-button:hover {
+    color: var(--dark-text);
+  }
+  .info-card-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px;
+    gap: 30px;
+    align-items: center;
+    .fishing-icon {
+      font-size: 1.9rem;
+      width: 70px;
+      // border: 2px solid black;
+    }
+    .info-card-fish-name {
+      text-align: center;
+      font-weight: 100;
+    }
+    p + p {
+      width: 160px;
+      text-align: right;
+      color: var(--dark-text);
+    }
+  }
+  .info-card-divider-line {
+    width: 90%;
+    height: 3px;
+    background-color: var(--bushes);
+  }
+}
+.fish-info-card-animation {
+  animation: fish-info-card-animation 0.8s ease-in-out forwards;
+}
+.fish-info-card-away {
+  animation: fish-info-card-away 0.8s ease-in-out forwards;
+}
+
+@keyframes fish-info-card-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-590px);
+  }
+  100% {
+    transform: translateY(-540px);
+  }
+}
+
+@keyframes fish-info-card-away {
+  0% {
+    transform: translateY(-540px);
+  }
+  50% {
+    transform: translateY(-590px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 // -------------------------
@@ -35,7 +171,7 @@ body {
 .sun {
   position: absolute;
   content: "";
-  background-color: #feffcd;
+  background-color: var(--yellow);
   height: 140px;
   width: 140px;
   border-radius: 50%;
@@ -62,7 +198,7 @@ body {
 .cloud-part-1 {
   position: absolute;
   //   border: 2px solid black;
-  background-color: white;
+  background-color: var(--clouds);
   height: 90px;
   width: 90px;
   border-radius: 50%;
@@ -71,7 +207,7 @@ body {
 .cloud-part-2 {
   position: absolute;
   //   border: 2px solid black;
-  background-color: white;
+  background-color: var(--clouds);
   height: 70px;
   width: 70px;
   border-radius: 50%;
@@ -80,8 +216,7 @@ body {
 }
 .cloud-part-3 {
   position: absolute;
-  //   border: 2px solid black;
-  background-color: white;
+  background-color: var(--clouds);
   height: 55px;
   width: 130px;
   border-radius: 0 20px 20px 0px;
@@ -91,7 +226,7 @@ body {
 .cloud-part-4 {
   position: absolute;
   //   border: 2px solid black;
-  background-color: white;
+  background-color: var(--clouds);
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -133,7 +268,7 @@ body {
 
 // DISTANT MOUNTAINS
 .distant-mountain {
-  background-color: #a1bba3;
+  background-color: var(--distant-mountains);
   z-index: 5;
 }
 
@@ -210,7 +345,7 @@ body {
 
 // middle mountains
 .middle-mountain {
-  background-color: #82ba86;
+  background-color: var(--middle-mountains);
   z-index: 10;
 }
 .mm1 {
@@ -270,7 +405,7 @@ body {
 
 // close mountains
 .close-mountain {
-  background-color: #56a65e;
+  background-color: var(--close-mountains);
   z-index: 15;
 }
 .mc0 {
@@ -352,7 +487,7 @@ body {
 .bush {
   position: absolute;
   border-radius: 50%;
-  background-color: #25b133;
+  background-color: var(--bushes);
 }
 
 // -------------------------
@@ -361,35 +496,37 @@ body {
 
 .next-container {
   // background-color: #25b133;
+  position: relative;
   background: linear-gradient(
     180deg,
-    rgba(37, 177, 51, 1) 0%,
-    rgba(37, 177, 51, 1) 7%,
-    rgba(197, 244, 255, 1) 100%
+    var(--bushes) 0%,
+    var(--bushes) 7%,
+    var(--sky) 100%
   );
-  padding-top: 210px;
+  z-index: 30;
+  padding-top: 70px;
   padding-bottom: 500px;
-  // height: 2000px;
-  // width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .info-container {
-  color: #56a65e;
+  z-index: 30;
+  color: var(--bushes);
   padding: 100px 120px;
   width: 90%;
   max-width: 1200px;
   border-radius: 30px;
-  background-color: #feffcd;
+  background-color: var(--yellow);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
   h1 {
     font-size: 2.5rem;
-    padding-bottom: 7px;
+    padding-bottom: 18px;
+    letter-spacing: 3px;
   }
   p {
     padding-left: 40px;
@@ -400,5 +537,5 @@ body {
 .divider-line {
   width: 20%;
   height: 3px;
-  background-color: #56a65e;
+  background-color: var(--bushes);
 }
