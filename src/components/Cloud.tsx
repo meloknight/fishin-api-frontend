@@ -1,6 +1,6 @@
 export default function Cloud(props: any) {
   const cloudStyle = `
-      bottom: calc(${props.cloudPosition.cloudBottom}vh + 50px);
+      bottom: calc(${props.cloudPosition.cloudBottom}vh + 90px);
       ${props.cloudPosition.cloudSide}: ${props.cloudPosition.cloudSideAmount}px;
       z-index: ${props.cloudPosition.cloudZIndex}
     `;

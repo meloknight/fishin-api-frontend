@@ -92,7 +92,7 @@ export default function Bushes() {
           bushSideAmount: -40,
           bushZIndex: 20,
           bushWidth: 400,
-          bushHeight: 200,
+          bushHeight: 160,
         }}
       />
       <Bush
@@ -127,7 +127,7 @@ export default function Bushes() {
       />
       <Bush
         bushPosition={{
-          bushBottom: 70,
+          bushBottom: 35,
           bushSide: "right",
           bushSideAmount: -80,
           bushZIndex: 20,

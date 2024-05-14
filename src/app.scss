@@ -140,6 +140,11 @@ button {
 .fish-info-card-away {
   animation: fish-info-card-away 0.8s ease-in-out forwards;
 }
+@media (height < 650px) {
+  .fish-info-card {
+    gap: 2px;
+  }
+}
 
 @keyframes fish-info-card-animation {
   0% {
@@ -176,15 +181,9 @@ button {
   width: 140px;
   border-radius: 50%;
   // bottom: 490px;
-  bottom: calc(60vh + 50px);
+  bottom: calc(57vh);
   right: 110px;
 }
-
-// @media (height < 650px) {
-//   .sun {
-//     bottom: 65vh;
-//   }
-// }
 
 @keyframes cloud-drift {
   0% {
@@ -263,6 +262,15 @@ button {
   }
 }
 
+@media (height < 650px) {
+  .top-container {
+    height: 99vh;
+  }
+  .go-fishin-button {
+    right: 1vw;
+  }
+}
+
 // -------------------------
 // THE MOUNTAINS!!
 // -------------------------
@@ -292,7 +300,9 @@ button {
   );
   right: -120px;
   width: 520px;
-  height: 300px;
+  // height: 300px;
+  height: 36vh;
+
   // height: min(300px, 50vh);
 }
 .md2 {
@@ -302,7 +312,8 @@ button {
   );
   right: -60px;
   width: 530px;
-  height: 250px;
+  // height: 250px;
+  height: 30vh;
 }
 .md3 {
   bottom: min(
@@ -311,7 +322,8 @@ button {
   );
   right: 140px;
   width: 530px;
-  height: 150px;
+  // height: 150px;
+  height: 18vh;
 }
 .md4 {
   bottom: min(
@@ -320,7 +332,8 @@ button {
   );
   right: 500px;
   width: 330px;
-  height: 100px;
+  // height: 100px;
+  height: 12vh;
 }
 .md5 {
   bottom: min(
@@ -362,7 +375,8 @@ button {
   );
   right: -100px;
   width: 400px;
-  height: 200px;
+  // height: 200px;
+  height: 24vh;
 }
 .mm2 {
   bottom: min(
@@ -371,7 +385,8 @@ button {
   );
   right: 120px;
   width: 400px;
-  height: 200px;
+  // height: 200px;
+  height: 24vh;
 }
 .mm3 {
   bottom: min(
@@ -381,6 +396,7 @@ button {
   right: 360px;
   width: 400px;
   height: 110px;
+  // height: 13vh;
 }
 .mm4 {
   bottom: min(
@@ -415,15 +431,16 @@ button {
   background-color: var(--close-mountains);
   z-index: 15;
 }
-.mc0 {
-  bottom: min(
-    var(--baseline-background-height) - 80px,
-    var(--baseline-background-height-vh) - 80px
-  );
-  right: -220px;
-  width: 400px;
-  height: 200px;
-}
+// .mc0 {
+//   bottom: min(
+//     var(--baseline-background-height) - 80px,
+//     var(--baseline-background-height-vh) - 80px
+//   );
+//   right: -220px;
+//   width: 400px;
+//   // height: 200px;
+//   height: 24vh;
+// }
 .mc1 {
   bottom: min(
     var(--baseline-background-height) - 80px,
@@ -432,6 +449,7 @@ button {
   right: -220px;
   width: 400px;
   height: 200px;
+  // height: 24vh;
 }
 .mc2 {
   bottom: min(
@@ -441,6 +459,7 @@ button {
   right: 0px;
   width: 520px;
   height: 120px;
+  // height: 14vh;
 }
 .mc3 {
   //   background-color: red;
@@ -450,7 +469,8 @@ button {
   );
   right: 520px;
   width: 280px;
-  height: 70px;
+  // height: 70px;
+  height: 8vh;
 }
 .mc4 {
   bottom: min(
@@ -460,6 +480,7 @@ button {
   right: 620px;
   width: 620px;
   height: 120px;
+  // height: 15vh;
 }
 .mc5 {
   bottom: min(
@@ -481,8 +502,8 @@ button {
 }
 .mc7 {
   bottom: min(
-    var(--baseline-background-height) - 20px,
-    var(--baseline-background-height-vh) - 20px
+    var(--baseline-background-height) - 30px,
+    var(--baseline-background-height-vh) - 30px
   );
   left: 50px;
   width: 220px;

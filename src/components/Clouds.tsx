@@ -9,7 +9,7 @@ export default function Clouds() {
           cloudBottom: 85,
           cloudSide: "left",
           cloudSideAmount: -20,
-          cloudZIndex: 6,
+          cloudZIndex: 1,
         }}
       />
       <Cloud
