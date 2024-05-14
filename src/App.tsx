@@ -89,7 +89,11 @@ function App() {
     <>
       <div className="top-container">
         <div className="title">Fishin API</div>
-        <div className="sun"></div>
+        <div className="sun-container">
+          <div className="sun"></div>
+          <div className="sun-flare"></div>
+          <div className="moon-hole"></div>
+        </div>
         <Birds />
         <Clouds />
         <Mountains />
