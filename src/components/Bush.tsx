@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { themeContext } from "../App";
+
 export default function Bush(props: any) {
+  const theme = useContext(themeContext);
+
   const bushStyle = `
       bottom: ${props.bushPosition.bushBottom}px;
       ${props.bushPosition.bushSide}: ${props.bushPosition.bushSideAmount}px;
@@ -9,7 +14,10 @@ export default function Bush(props: any) {
 
   return (
     <>
-      <div style={{ cssText: bushStyle }} className="bush"></div>
+      <div
+        style={{ cssText: bushStyle }}
+        className={`bush ${theme === "night" ? "night-bush" : ""}`}
+      ></div>
     </>
   );
 }
