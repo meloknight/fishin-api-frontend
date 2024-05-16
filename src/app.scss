@@ -28,6 +28,9 @@
   --night-middle-mountains: #402a39;
   --night-close-mountains: #1c1018;
   --night-bushes: #12664f;
+
+  --baseline-background-height: 270px;
+  --baseline-background-height-vh: 40vh;
 }
 
 body {
@@ -152,7 +155,7 @@ button {
       font-weight: 100;
     }
     p + p {
-      width: 160px;
+      width: 100%;
       text-align: right;
       color: var(--dark-text);
     }
@@ -191,6 +194,15 @@ button {
 @media (height < 650px) {
   .fish-info-card {
     gap: 2px;
+    // max-width: 600px;
+    // width: 90%;
+  }
+}
+@media (height < 380px) {
+  .fish-info-card {
+    max-width: 600px;
+    width: 90%;
+    padding-top: 20px;
   }
 }
 
@@ -246,7 +258,7 @@ button {
   }
   .moon-circle {
     position: absolute;
-    z-index: 100;
+    z-index: 0;
     height: 100px;
     width: 100px;
     top: 57px;
@@ -257,7 +269,6 @@ button {
   .sun-flare {
     position: absolute;
     background-color: transparent;
-
     border-radius: 50%;
     height: 159px;
     width: 159px;
@@ -265,12 +276,11 @@ button {
     left: 51%;
     top: 51%;
     transform: translate(-50%, -50%);
-    animation: sun-flare-animation 6s ease-in infinite;
+    animation: sun-flare-animation 4s ease-in infinite;
   }
   .moon-flare {
     position: absolute;
     background-color: transparent;
-
     border-radius: 50%;
     height: 159px;
     width: 159px;
@@ -278,7 +288,7 @@ button {
     left: 51%;
     top: 51%;
     transform: translate(-50%, -50%);
-    animation: moon-flare-animation 6s ease-in infinite;
+    animation: moon-flare-animation 4s ease-in infinite;
   }
 }
 .sun-container > .sun:hover {
@@ -292,7 +302,7 @@ button {
     width: 135px;
     border: 4px solid var(--yellow);
   }
-  60% {
+  50% {
     height: 135px;
     width: 135px;
     border: 4px solid var(--yellow);
@@ -309,7 +319,7 @@ button {
     width: 135px;
     border: 4px solid var(--night-yellow);
   }
-  60% {
+  50% {
     height: 135px;
     width: 135px;
     border: 3px solid var(--night-yellow);
@@ -415,8 +425,6 @@ button {
 .mountain {
   position: absolute;
   clip-path: polygon(50% 0, 0% 100%, 100% 100%);
-  --baseline-background-height: 270px;
-  --baseline-background-height-vh: 40vh;
 }
 
 // DISTANT MOUNTAINS
@@ -588,6 +596,7 @@ button {
 //   height: 24vh;
 // }
 .mc1 {
+  // background-color: red;
   bottom: min(
     var(--baseline-background-height) - 80px,
     var(--baseline-background-height-vh) - 80px
@@ -654,6 +663,101 @@ button {
   left: 50px;
   width: 220px;
   height: 60px;
+}
+
+// BOATS
+.boats {
+  position: absolute;
+  z-index: 1;
+  filter: invert(34%) sepia(0%) saturate(876%) hue-rotate(176deg)
+    brightness(92%) contrast(78%);
+}
+.night-boats {
+  filter: invert(60%) sepia(44%) saturate(659%) hue-rotate(129deg)
+    brightness(100%) contrast(87%);
+}
+.boat-1 {
+  width: 12px;
+  bottom: min(
+    var(--baseline-background-height) - 84px,
+    var(--baseline-background-height-vh) - 84px
+  );
+  right: 40px;
+}
+.boat-2 {
+  width: 18px;
+  bottom: min(
+    var(--baseline-background-height) - 105px,
+    var(--baseline-background-height-vh) - 105px
+  );
+  right: 120px;
+}
+.boat-3 {
+  transform: scaleX(-1);
+  width: 12px;
+  bottom: min(
+    var(--baseline-background-height) - 74px,
+    var(--baseline-background-height-vh) - 74px
+  );
+  right: 180px;
+}
+.boat-4 {
+  width: 11px;
+  bottom: min(
+    var(--baseline-background-height) - 54px,
+    var(--baseline-background-height-vh) - 54px
+  );
+  right: 300px;
+}
+.boat-5 {
+  width: 9px;
+  bottom: min(
+    var(--baseline-background-height) - 44px,
+    var(--baseline-background-height-vh) - 44px
+  );
+  right: 503px;
+}
+.boat-6 {
+  width: 8px;
+  bottom: min(
+    var(--baseline-background-height) - 35px,
+    var(--baseline-background-height-vh) - 35px
+  );
+  right: 750px;
+}
+.boat-7 {
+  transform: scaleX(-1);
+  width: 18px;
+  bottom: min(
+    var(--baseline-background-height) - 105px,
+    var(--baseline-background-height-vh) - 105px
+  );
+  left: 15px;
+}
+.boat-8 {
+  width: 15px;
+  bottom: min(
+    var(--baseline-background-height) - 85px,
+    var(--baseline-background-height-vh) - 85px
+  );
+  left: 55px;
+}
+.boat-9 {
+  transform: scaleX(-1);
+  width: 12px;
+  bottom: min(
+    var(--baseline-background-height) - 76px,
+    var(--baseline-background-height-vh) - 76px
+  );
+  left: 150px;
+}
+.boat-10 {
+  width: 8px;
+  bottom: min(
+    var(--baseline-background-height) - 40px,
+    var(--baseline-background-height-vh) - 40px
+  );
+  left: 405px;
 }
 
 // FOREGROUND - Grass and bushes
@@ -746,12 +850,12 @@ button {
     width: 80px;
     position: absolute;
     right: 10px;
-    bottom: 300px;
+    bottom: 400px;
     z-index: 100;
     filter: invert(54%) sepia(56%) saturate(6853%) hue-rotate(337deg)
       brightness(98%) contrast(115%);
   }
-  @media (width < 450px) {
+  @media (width < 650px) {
     .fish-6 {
       z-index: 1;
     }

@@ -22,6 +22,9 @@ export default function InfoContainer() {
             random fish from one of many origins (such as Majora's Mask, Stardew
             Valley, or even the real world). You can also get a list of all fish
             in the database, or search a single fish for its details.
+            <br />
+            <br />
+            Also, click the sun for night mode if you want :)
           </p>
         </section>
         <div
@@ -57,7 +60,7 @@ export default function InfoContainer() {
             localhost:5000 /api/v1/fish to use this route.
           </p>
         </section>
-        <div
+        {/* <div
           className={`divider-line ${
             theme === "night" ? "night-divider-line" : ""
           }`}
@@ -66,7 +69,21 @@ export default function InfoContainer() {
           <h1>Get Specific Fish by ID</h1>
           <p>
             If you are interested in a specific fishes info then send a GET
-            request to localhost:5000 /api/v1/fish/searchfish/:id
+            request to localhost:5000 /api/v1/fish/searchfish/:id.
+          </p>
+        </section> */}
+        <div
+          className={`divider-line ${
+            theme === "night" ? "night-divider-line" : ""
+          }`}
+        ></div>
+        <section className="overview-container">
+          <h1>Tech Stack</h1>
+          <p>
+            This project's backend is built with Node.js, Express.js, and
+            PostgreSQL. The database and API are hosted with Microsoft Azure.
+            The frontend is built with React.js, TypeScript, and Sass. Thanks
+            for checking it out and have a Nice Day!
           </p>
         </section>
       </div>

@@ -83,7 +83,7 @@ function App() {
           }`}
         >
           <p>Location:</p>
-          <p>Southern Termina Swamps</p>
+          <p className="location-fish-info-card">Southern Termina Swamps</p>
         </div>
         <div
           className={`info-card-divider-line ${
@@ -96,7 +96,9 @@ function App() {
           }`}
         >
           <p>Origin:</p>
-          <p>Legend of Zelda: Majora's Mask</p>
+          <p className="origin-fish-info-card">
+            Legend of Zelda: Majora's Mask
+          </p>
         </div>
       </section>
     );
@@ -150,6 +152,60 @@ function App() {
           <Birds />
           <Clouds />
           <Mountains />
+          {/* THE BOAT SECTION */}
+          <img
+            className={`boats boat-1 ${theme === "night" ? "night-boats" : ""}`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+          <img
+            className={`boats boat-2 ${theme === "night" ? "night-boats" : ""}`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+          <img
+            className={`boats boat-3 ${theme === "night" ? "night-boats" : ""}`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+          <img
+            className={`boats boat-4 ${theme === "night" ? "night-boats" : ""}`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+          <img
+            className={`boats boat-5 ${theme === "night" ? "night-boats" : ""}`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+          <img
+            className={`boats boat-6 ${theme === "night" ? "night-boats" : ""}`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+          <img
+            className={`boats boat-7 ${theme === "night" ? "night-boats" : ""}`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+          <img
+            className={`boats boat-8 ${theme === "night" ? "night-boats" : ""}`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+          <img
+            className={`boats boat-9 ${theme === "night" ? "night-boats" : ""}`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+          <img
+            className={`boats boat-10 ${
+              theme === "night" ? "night-boats" : ""
+            }`}
+            src="src/assets/boat.svg"
+            alt="boat"
+          />
+
           <Bushes />
           <FishInfoCard />
           <button
