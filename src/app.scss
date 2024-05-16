@@ -682,10 +682,22 @@ button {
   );
   z-index: 30;
   padding-top: 70px;
-  padding-bottom: 500px;
+  padding-bottom: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
+  .lower-right {
+    bottom: 0;
+    left: -110px;
+    width: 500px;
+    height: 400px;
+  }
+  .lower-left {
+    bottom: 0;
+    left: -110px;
+    width: 500px;
+    height: 400px;
+  }
 }
 .night-next-container {
   background: linear-gradient(
@@ -770,4 +782,10 @@ button {
       font-size: 1rem;
     }
   }
+}
+
+// FOOTER SECTION
+footer {
+  min-height: 200px;
+  background-color: var(--clouds);
 }

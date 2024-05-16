@@ -167,7 +167,20 @@ function App() {
           }`}
         >
           <InfoContainer />
+          <div
+            className={`mountain distant-mountain lower-left ${
+              theme === "night" ? "night-distant-mountain" : ""
+            }`}
+          ></div>
+          <div
+            className={`mountain distant-mountain lower-right ${
+              theme === "night" ? "night-distant-mountain" : ""
+            }`}
+          ></div>
         </div>
+        <footer
+          className={`${theme === "night" ? "night-footer" : ""}`}
+        ></footer>
       </themeContext.Provider>
     </>
   );
