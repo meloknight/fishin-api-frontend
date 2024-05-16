@@ -37,14 +37,14 @@ export default function InfoContainer() {
           <p>
             If you feel like taking a moment to kick back on the pier or in a
             boat, drop in a line and see what you catch. The Go Fishin button
-            above lets you send a GET request to localhost:5000
+            above lets you send a GET request to fishinapi.ca
             /api/v1/fish/gofishin.
             <br />
             <br />
-            This route takes the request and grabs a fish (weighted by rarity)
-            and returns them with a weight and length chosen from a standard
-            distribution around a chosen mean value. See if you can catch a big
-            one!
+            This route takes the request and grabs a random fish (weighted by
+            rarity) and returns them with a weight and length chosen from a
+            standard distribution around a chosen mean value. See if you can
+            catch a big one!
           </p>
         </section>
         <div
@@ -57,7 +57,7 @@ export default function InfoContainer() {
           <p>
             If you want to pull a list of all of the fish in the database with
             all of their info for reference. Feel free to send a GET request to
-            localhost:5000 /api/v1/fish to use this route.
+            fishinapi.ca /api/v1/fish to use this route.
           </p>
         </section>
         {/* <div
