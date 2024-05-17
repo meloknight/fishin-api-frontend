@@ -44,6 +44,7 @@ function App() {
             goFishinCardInfo={goFishinCardInfo}
           />
           <GoFishinButton
+            fishCardDown={fishCardDown}
             setFishCardDown={setFishCardDown}
             setGoFishinCardInfo={setGoFishinCardInfo}
           />

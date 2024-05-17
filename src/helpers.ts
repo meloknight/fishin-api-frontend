@@ -8,7 +8,7 @@ export async function getGoFishin(
       throw new Error("Network response was not ok");
     }
     const data = await response.json();
-    setFishCardDown(false);
+    // setFishCardDown(false);
     console.log(data);
 
     setGoFishinCardInfo((prevInfo: any) => ({
