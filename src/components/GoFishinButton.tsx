@@ -6,14 +6,13 @@ export default function GoFishinButton(props: any) {
   const theme = useContext(themeContext);
 
   function fishInfoButtonClick() {
-    if (props.fishCardDown) {
-      getGoFishin(props.setFishCardDown, props.setGoFishinCardInfo);
-      props.setFishCardDown(false);
+    if (props.fishCardDown === "initial" || props.fishCardDown === "down") {
+      getGoFishin(props.setGoFishinCardInfo, props.setFishCardDown);
+      // props.setFishCardDown("up");
     } else {
-      props.setFishCardDown(true);
+      props.setFishCardDown("down");
     }
   }
-
   return (
     <>
       <button
@@ -22,7 +21,9 @@ export default function GoFishinButton(props: any) {
           theme === "night" ? "night-go-fishin-button" : ""
         }`}
       >
-        {props.fishCardDown ? "Go Fishin!" : "Release!"}
+        {props.fishCardDown === "initial" || props.fishCardDown === "down"
+          ? "Go Fishin!"
+          : "Release!"}
       </button>
     </>
   );

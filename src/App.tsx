@@ -15,7 +15,8 @@ import GoFishinButton from "./components/GoFishinButton";
 export const themeContext = createContext("day");
 
 function App() {
-  const [fishCardDown, setFishCardDown] = useState(true);
+  // fishcarddown ["initial, down, up"]
+  const [fishCardDown, setFishCardDown] = useState("initial");
   const [theme, setTheme] = useState("day");
   const [goFishinCardInfo, setGoFishinCardInfo] = useState({
     fish_name: "No fish yet",

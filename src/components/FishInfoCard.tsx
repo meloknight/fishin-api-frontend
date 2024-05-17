@@ -8,13 +8,17 @@ export default function FishInfoCard(props: any) {
   return (
     <section
       className={`fish-info-card ${
-        props.fishCardDown ? "fish-info-card-away" : "fish-info-card-animation"
+        props.fishCardDown === "initial"
+          ? ""
+          : props.fishCardDown === "down"
+          ? "fish-info-card-away"
+          : "fish-info-card-animation"
       } ${theme === "night" ? "night-fish-info-card" : ""}`}
     >
       {/* <section className="fish-info-card fish-info-card-away"> */}
       <h4 className={`nice-catch`}>Nice Catch!</h4>
       <button
-        onClick={() => props.setFishCardDown(true)}
+        onClick={() => props.setFishCardDown("down")}
         className={`info-card-close-button ${
           theme === "night" ? "night-info-card-close-button" : ""
         }`}
