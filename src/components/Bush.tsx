@@ -18,19 +18,31 @@ export default function Bush({
   bushWidth,
   bushHeight,
 }: BushProps) {
+  let bushStyle;
   const theme = useContext(themeContext);
 
-  const bushStyle = `
-      bottom: ${bushBottom}px;
-      ${bushSide}: ${bushSideAmount}px;
-      z-index: ${bushZIndex};
-      width: ${bushWidth}px;
-      height: ${bushHeight}px
-    `;
+  if (bushSide === "left") {
+    bushStyle = {
+      bottom: `${bushBottom}px`,
+      left: `${bushSideAmount}px`,
+      zIndex: `${bushZIndex}`,
+      width: `${bushWidth}px`,
+      height: `${bushHeight}px`,
+    };
+  } else {
+    bushStyle = {
+      bottom: `${bushBottom}px`,
+      right: `${bushSideAmount}px`,
+      zIndex: `${bushZIndex}`,
+      width: `${bushWidth}px`,
+      height: `${bushHeight}px`,
+    };
+  }
+
   return (
     <>
       <div
-        style={{ cssText: bushStyle }}
+        style={bushStyle}
         className={`bush ${theme === "night" ? "night-bush" : ""}`}
       ></div>
     </>

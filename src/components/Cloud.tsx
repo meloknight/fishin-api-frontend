@@ -14,15 +14,26 @@ export default function Cloud({
   cloudSideAmount,
   cloudZIndex,
 }: CloudProps) {
-  const cloudStyle = `
-      bottom: calc(${cloudBottom}vh + 90px);
-      ${cloudSide}: ${cloudSideAmount}px;
-      z-index: ${cloudZIndex}
-    `;
+  let cloudStyle;
+
+  if (cloudSide === "left") {
+    cloudStyle = {
+      bottom: `calc(${cloudBottom}vh + 90px)`,
+      left: `${cloudSideAmount}px`,
+      zIndex: `${cloudZIndex}`,
+    };
+  } else {
+    cloudStyle = {
+      bottom: `calc(${cloudBottom}vh + 90px)`,
+      right: `${cloudSideAmount}px`,
+      zIndex: `${cloudZIndex}`,
+    };
+  }
+
   const theme = useContext(themeContext);
   return (
     <>
-      <div style={{ cssText: cloudStyle }} className="cloud-container">
+      <div style={cloudStyle} className="cloud-container">
         <div
           className={`cloud-part-1 ${theme === "night" ? "night-cloud" : ""}`}
         ></div>

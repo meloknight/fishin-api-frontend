@@ -11,15 +11,25 @@ export default function Bird({
   birdSideAmount,
   birdZIndex,
 }: BirdProps) {
-  const birdStyle = `
-    bottom: ${birdBottom}px;
-    ${birdSide}: ${birdSideAmount}px;
-    z-index: ${birdZIndex}
-  `;
+  let birdStyle;
+
+  if (birdSide === "left") {
+    birdStyle = {
+      bottom: `${birdBottom}px`,
+      left: `${birdSideAmount}px`,
+      zIndex: `${birdZIndex}`,
+    };
+  } else {
+    birdStyle = {
+      bottom: `${birdBottom}px`,
+      right: `${birdSideAmount}px`,
+      zIndex: `${birdZIndex}`,
+    };
+  }
 
   return (
     <>
-      <div style={{ cssText: birdStyle }} className="bird-container">
+      <div style={birdStyle} className="bird-container">
         <img src="src/assets/bird.svg" alt="bird" />
       </div>
     </>
