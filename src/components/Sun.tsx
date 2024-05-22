@@ -1,15 +1,19 @@
 import { useContext } from "react";
 import { themeContext } from "../App";
 
-export default function Sun(props: any) {
+type SunProps = {
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+};
+
+export default function Sun({ setTheme }: SunProps) {
   const theme = useContext(themeContext);
   return (
     <>
       <div className="sun-container">
         <button
           onClick={() => {
-            if (theme === "night") props.setTheme("day");
-            else props.setTheme("night");
+            if (theme === "night") setTheme("day");
+            else setTheme("night");
           }}
           className={`sun ${theme === "night" ? "moon" : ""}`}
         ></button>

@@ -30,9 +30,9 @@ function App() {
         <div
           className={`top-container ${theme === "night" ? "night-sky" : ""}`}
         >
-          <div className={`title ${theme === "night" ? "night-title" : ""}`}>
+          <h1 className={`title ${theme === "night" ? "night-title" : ""}`}>
             Fishin API
-          </div>
+          </h1>
           <Sun setTheme={setTheme} />
           <Birds />
           <Clouds />

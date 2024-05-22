@@ -1,17 +1,32 @@
 import { useContext } from "react";
 import { themeContext } from "../App";
 
-export default function Bush(props: any) {
+type BushProps = {
+  bushBottom: number;
+  bushSide: string;
+  bushSideAmount: number;
+  bushZIndex: number;
+  bushWidth: number;
+  bushHeight: number;
+};
+
+export default function Bush({
+  bushBottom,
+  bushSide,
+  bushSideAmount,
+  bushZIndex,
+  bushWidth,
+  bushHeight,
+}: BushProps) {
   const theme = useContext(themeContext);
 
   const bushStyle = `
-      bottom: ${props.bushPosition.bushBottom}px;
-      ${props.bushPosition.bushSide}: ${props.bushPosition.bushSideAmount}px;
-      z-index: ${props.bushPosition.bushZIndex};
-      width: ${props.bushPosition.bushWidth}px;
-      height: ${props.bushPosition.bushHeight}px
+      bottom: ${bushBottom}px;
+      ${bushSide}: ${bushSideAmount}px;
+      z-index: ${bushZIndex};
+      width: ${bushWidth}px;
+      height: ${bushHeight}px
     `;
-
   return (
     <>
       <div

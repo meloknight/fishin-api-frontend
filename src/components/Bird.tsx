@@ -1,8 +1,20 @@
-export default function Bird(props: any) {
+type BirdProps = {
+  birdBottom: number;
+  birdSide: string;
+  birdSideAmount: number;
+  birdZIndex: number;
+};
+
+export default function Bird({
+  birdBottom,
+  birdSide,
+  birdSideAmount,
+  birdZIndex,
+}: BirdProps) {
   const birdStyle = `
-    bottom: ${props.birdPosition.birdBottom}px;
-    ${props.birdPosition.birdSide}: ${props.birdPosition.birdSideAmount}px;
-    z-index: ${props.birdPosition.birdZIndex}
+    bottom: ${birdBottom}px;
+    ${birdSide}: ${birdSideAmount}px;
+    z-index: ${birdZIndex}
   `;
 
   return (

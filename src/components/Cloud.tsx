@@ -1,11 +1,23 @@
 import { useContext } from "react";
 import { themeContext } from "../App";
 
-export default function Cloud(props: any) {
+type CloudProps = {
+  cloudBottom: number;
+  cloudSide: string;
+  cloudSideAmount: number;
+  cloudZIndex: number;
+};
+
+export default function Cloud({
+  cloudBottom,
+  cloudSide,
+  cloudSideAmount,
+  cloudZIndex,
+}: CloudProps) {
   const cloudStyle = `
-      bottom: calc(${props.cloudPosition.cloudBottom}vh + 90px);
-      ${props.cloudPosition.cloudSide}: ${props.cloudPosition.cloudSideAmount}px;
-      z-index: ${props.cloudPosition.cloudZIndex}
+      bottom: calc(${cloudBottom}vh + 90px);
+      ${cloudSide}: ${cloudSideAmount}px;
+      z-index: ${cloudZIndex}
     `;
   const theme = useContext(themeContext);
   return (

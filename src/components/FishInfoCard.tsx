@@ -3,14 +3,24 @@ import { themeContext } from "../App";
 
 import { GiFishingHook, GiCirclingFish } from "react-icons/gi";
 
-export default function FishInfoCard(props: any) {
+type FishInfoCardProps = {
+  fishCardDown: string;
+  setFishCardDown: React.Dispatch<React.SetStateAction<string>>;
+  goFishinCardInfo: any;
+};
+
+export default function FishInfoCard({
+  fishCardDown,
+  setFishCardDown,
+  goFishinCardInfo,
+}: FishInfoCardProps) {
   const theme = useContext(themeContext);
   return (
     <section
       className={`fish-info-card ${
-        props.fishCardDown === "initial"
+        fishCardDown === "initial"
           ? ""
-          : props.fishCardDown === "down"
+          : fishCardDown === "down"
           ? "fish-info-card-away"
           : "fish-info-card-animation"
       } ${theme === "night" ? "night-fish-info-card" : ""}`}
@@ -18,7 +28,7 @@ export default function FishInfoCard(props: any) {
       {/* <section className="fish-info-card fish-info-card-away"> */}
       <h4 className={`nice-catch`}>Nice Catch!</h4>
       <button
-        onClick={() => props.setFishCardDown("down")}
+        onClick={() => setFishCardDown("down")}
         className={`info-card-close-button ${
           theme === "night" ? "night-info-card-close-button" : ""
         }`}
@@ -27,9 +37,7 @@ export default function FishInfoCard(props: any) {
       </button>
       <div className="info-card-section">
         <GiFishingHook className="fishing-icon" />
-        <h1 className="info-card-fish-name">
-          {props.goFishinCardInfo.fish_name}
-        </h1>
+        <h1 className="info-card-fish-name">{goFishinCardInfo.fish_name}</h1>
         <GiCirclingFish className="fishing-icon" />
       </div>
       <div
@@ -43,7 +51,7 @@ export default function FishInfoCard(props: any) {
         }`}
       >
         <p>Weight:</p>
-        <p>{props.goFishinCardInfo.fish_weight_kgs} kg</p>
+        <p>{goFishinCardInfo.fish_weight_kgs} kg</p>
       </div>
       <div
         className={`info-card-divider-line ${
@@ -56,7 +64,7 @@ export default function FishInfoCard(props: any) {
         }`}
       >
         <p>Length:</p>
-        <p>{props.goFishinCardInfo.fish_length_cms} cm</p>
+        <p>{goFishinCardInfo.fish_length_cms} cm</p>
       </div>
       <div
         className={`info-card-divider-line ${

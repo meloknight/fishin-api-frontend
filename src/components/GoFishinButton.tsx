@@ -2,15 +2,25 @@ import { useContext } from "react";
 import { themeContext } from "../App";
 import { getGoFishin } from "../helpers";
 
-export default function GoFishinButton(props: any) {
+type GoFishinButtonProps = {
+  fishCardDown: string;
+  setFishCardDown: React.Dispatch<React.SetStateAction<string>>;
+  setGoFishinCardInfo: any;
+};
+
+export default function GoFishinButton({
+  fishCardDown,
+  setFishCardDown,
+  setGoFishinCardInfo,
+}: GoFishinButtonProps) {
   const theme = useContext(themeContext);
 
   function fishInfoButtonClick() {
-    if (props.fishCardDown === "initial" || props.fishCardDown === "down") {
-      getGoFishin(props.setGoFishinCardInfo, props.setFishCardDown);
+    if (fishCardDown === "initial" || fishCardDown === "down") {
+      getGoFishin(setGoFishinCardInfo, setFishCardDown);
       // props.setFishCardDown("up");
     } else {
-      props.setFishCardDown("down");
+      setFishCardDown("down");
     }
   }
   return (
@@ -21,7 +31,7 @@ export default function GoFishinButton(props: any) {
           theme === "night" ? "night-go-fishin-button" : ""
         }`}
       >
-        {props.fishCardDown === "initial" || props.fishCardDown === "down"
+        {fishCardDown === "initial" || fishCardDown === "down"
           ? "Go Fishin!"
           : "Release!"}
       </button>
