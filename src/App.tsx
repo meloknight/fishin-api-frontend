@@ -58,6 +58,7 @@ function App() {
           <InfoContainer />
           <FishAndSeaweed />
         </div>
+        <div className="test-div"></div>
       </themeContext.Provider>
     </>
   );
