@@ -30,7 +30,7 @@ export default function Bird({
   return (
     <>
       <div style={birdStyle} className="bird-container">
-        <img src="./assets/bird.svg" alt="bird" />
+        <img src="../assets/bird.svg" alt="bird" />
       </div>
     </>
   );
