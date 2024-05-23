@@ -22,6 +22,8 @@ function App() {
     fish_name: "No fish yet",
     fish_length_cms: 0,
     fish_weight_kgs: 0,
+    fish_location: "behind you",
+    fish_origin: "the beginning",
   });
 
   return (

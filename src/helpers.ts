@@ -15,6 +15,8 @@ export async function getGoFishin(
       fish_name: data.fish_name,
       fish_length_cms: data.fish_length_cms,
       fish_weight_kgs: data.fish_weight_kgs,
+      fish_location: data.fish_location,
+      fish_origin: data.fish_origin,
     }));
 
     setFishCardDown("up");

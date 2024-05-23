@@ -15,6 +15,12 @@ export default function FishInfoCard({
   goFishinCardInfo,
 }: FishInfoCardProps) {
   const theme = useContext(themeContext);
+
+  const fishWeightLbs =
+    Math.floor(goFishinCardInfo.fish_weight_kgs * 2.20462 * 10) / 10;
+  const fishLengthInches =
+    Math.floor(goFishinCardInfo.fish_length_cms * 0.393701 * 10) / 10;
+
   return (
     <section
       className={`fish-info-card ${
@@ -51,7 +57,9 @@ export default function FishInfoCard({
         }`}
       >
         <p>Weight:</p>
-        <p>{goFishinCardInfo.fish_weight_kgs} kg</p>
+        <p>
+          {goFishinCardInfo.fish_weight_kgs}kg / {fishWeightLbs}lbs
+        </p>
       </div>
       <div
         className={`info-card-divider-line ${
@@ -64,7 +72,9 @@ export default function FishInfoCard({
         }`}
       >
         <p>Length:</p>
-        <p>{goFishinCardInfo.fish_length_cms} cm</p>
+        <p>
+          {goFishinCardInfo.fish_length_cms}cm / {fishLengthInches}in
+        </p>
       </div>
       <div
         className={`info-card-divider-line ${
@@ -77,7 +87,9 @@ export default function FishInfoCard({
         }`}
       >
         <p>Location:</p>
-        <p className="location-fish-info-card">Southern Termina Swamps</p>
+        <p className="location-fish-info-card">
+          {goFishinCardInfo.fish_location}
+        </p>
       </div>
       <div
         className={`info-card-divider-line ${
@@ -90,7 +102,7 @@ export default function FishInfoCard({
         }`}
       >
         <p>Origin:</p>
-        <p className="origin-fish-info-card">Legend of Zelda: Majora's Mask</p>
+        <p className="origin-fish-info-card">{goFishinCardInfo.fish_origin}</p>
       </div>
     </section>
   );
