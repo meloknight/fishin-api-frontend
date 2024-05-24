@@ -1,6 +1,7 @@
 .sun-container {
   position: absolute;
   bottom: calc(57vh);
+  bottom: min(57vh, 550px);
   right: 110px;
   width: 240px;
   height: 240px;

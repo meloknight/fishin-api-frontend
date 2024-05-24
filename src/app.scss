@@ -43,6 +43,7 @@
 body {
   font-family: var(--main-font), sans-serif;
   background-color: var(--sky);
+  // width: 100vw;
   overflow-x: hidden;
   letter-spacing: 1px;
   line-height: 30px;
@@ -62,6 +63,7 @@ button {
   position: relative;
   height: 95vh;
   max-height: 750px;
+  overflow: hidden;
 }
 
 .title {
