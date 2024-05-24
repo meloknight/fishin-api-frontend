@@ -3,7 +3,9 @@ export async function getGoFishin(
   setFishCardDown: any
 ) {
   try {
-    const response = await fetch("http://localhost:5000/api/v1/fish/gofishin");
+    const response = await fetch(
+      "https://fishin-api.azurewebsites.net/api/v1/fish/gofishin"
+    );
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
