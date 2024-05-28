@@ -2,6 +2,7 @@ export async function getGoFishin(
   setGoFishinCardInfo: React.Dispatch<React.SetStateAction<any>>,
   setFishCardDown: any
 ) {
+  // "https://fishin-api.azurewebsites.net/api/v1/fish/gofishin"
   try {
     const response = await fetch(
       "https://fishin-api.azurewebsites.net/api/v1/fish/gofishin"
